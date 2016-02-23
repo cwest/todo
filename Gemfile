@@ -19,6 +19,7 @@ gem 'racc'
 gem 'fastly-rails'
 gem 'rails_12factor'
 
+gem 'cf-app-utils'
 
 group :assets do
   gem 'sass-rails', '~> 4.0'
