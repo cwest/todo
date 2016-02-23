@@ -1,0 +1,10 @@
+---
+applications:
+- name: fastly-todo
+  memory: 1024M
+  instances: 1
+  host: fastly-todo
+  domain: cfapps.io
+  services:
+  - fastly-todo-pg
+  command: bundle exec rake cf:on_first_instance db:migrate && bundle exec rails s -p $PORT -e $RAILS_ENV
